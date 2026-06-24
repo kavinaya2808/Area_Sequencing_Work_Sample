@@ -1,17 +1,25 @@
 ## Problem understanding
 My Observation: 
+
 - I understood that this problem is mainly about "Route optimization" since the coverage path inside each survey area is already planned. 
 - My task is to decide the order in which the drone should visit the areas.
 - This problem remainds me of the traveling salesman problem. Since the baseline task does not require returning to the starting point, I treated it as an open TS Problem
+
 What needs to be optimised?
+
 Given:
+
 - each area has an entry point and exit point
 - the cost is based on the travel distance between areas
 - route_cost() helper provides the cost to evaluate and compare routes.
+
 Therefore, the main abjective would be
+
 - to find a good visiting order for survey areas
 - Minimize the travel distance from the exit point of the current area to the entry point of the next area.
+
 Assumptions:
+
 - I assumed that the polygon geometry is only for contextual understanding and I didn't use it for route optimization. Route decision were purely based on the provided entry and exit points.
 
 ## Implementation:
